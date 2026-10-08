@@ -1,5 +1,5 @@
 {
-  "name": "dsh-git-badge",
+  "name": "@yiarce/dsh-git-badge",
   "description": "DSH web 插件：左侧工作区的 Git 状态徽章。工作区和状态变化通过同源事件流推送，点击徽章直接向桌面基座发送带工作区载荷的 Wails 事件；DOM 按工作区 ID 调和挂载。",
   "version": "0.2.0",
   "dependencies": {

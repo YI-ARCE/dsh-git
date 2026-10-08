@@ -12,4 +12,4 @@
 # dsh-window-chrome 的拖拽热区同一模式，升级自适应。
 - insert:
     - id: ui-git-badge
-      name: 'dsh-git-badge'
+      name: '@yiarce/dsh-git-badge'
