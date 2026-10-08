@@ -1,0 +1,15 @@
+# dsh-git-badge bundle patch
+#
+# 在所有层之后插入一个 client-plugin 行：本包的浏览器半边以 DOM 同步方式
+# 给左侧工作区条目行挂 Git 状态徽章。
+#
+# 本包的 Node 半边负责工作区探测、状态刷新和同源事件流；浏览器半边
+# 按工作区 ID 调和挂载，点击时向桌面基座直发带载荷事件。
+#
+# 为什么用 DOM 同步而不是给 dsh-client-ui-workspace 加槽位：
+# dsh-client-ui-workspace 的条目行没有任何扩展点，fork 会在每次
+# dsh-web-app 升级时碎掉；DOM 同步（类名包含匹配 + 文本匹配）与
+# dsh-window-chrome 的拖拽热区同一模式，升级自适应。
+- insert:
+    - id: ui-git-badge
+      name: 'dsh-git-badge'

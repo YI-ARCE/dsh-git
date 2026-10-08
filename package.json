@@ -1,0 +1,38 @@
+{
+  "name": "dsh-git-badge",
+  "description": "DSH web 插件：左侧工作区的 Git 状态徽章。工作区和状态变化通过同源事件流推送，点击徽章直接向桌面基座发送带工作区载荷的 Wails 事件；DOM 按工作区 ID 调和挂载。",
+  "version": "0.2.0",
+  "dependencies": {
+    "@deepseek-ai/schemastery": "^3.18.4"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [],
+      "platform": "web"
+    }
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "package.json",
+    "README.md"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YI-ARCE/dsh-git.git"
+  }
+}
